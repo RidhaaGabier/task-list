@@ -1,16 +1,16 @@
-let addToDoButton = document.getElementById("addToDo");
+let addInputButton = document.getElementById("addInput-btn");
 let toDoContainer = document.getElementById("toDoContainer");
-let inputField =  document.getElementById("inputField");
+let inputResult =  document.getElementById("inputResult");
 
 // action when clicked
-  addToDoButton.addEventListener("click",function(){
+  addInputButton.addEventListener("click",function(){
   let paragraph = document.createElement('p')
   // styles the text after submitted
   paragraph.classList.add('paragraph-styling')
-  paragraph.innerText = inputField.value;
+  paragraph.innerText = inputResult.value;
   toDoContainer.appendChild(paragraph);
   // empty input after value submitted
-  inputField.value = "";
+  inputResult.value = "";
   // marks list item checked
   paragraph.addEventListener("click",function(){
     paragraph.style.textDecoration = "line-through";
