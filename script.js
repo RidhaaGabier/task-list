@@ -22,6 +22,20 @@ submit.addEventListener("click", (e) => {
 
 // Display on DOM, "display button"
 
+
+
+
+
+
+
+
+
+
+
+
+
++
+
 display.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -38,7 +52,7 @@ display.addEventListener('click', (e) => {
     myData.forEach(info => {
       let results = document.createElement('li');
       results.textContent = `
-      <i class="fa-thin fa-eye"></i> ${info.inputResult}
+      ${info.inputResult}
       `;
       displayInfo.appendChild(results)
     
