@@ -17,11 +17,14 @@
         <div class="list" id="toDoContainer">
             <h1>My To Do List 🤔</h1>
             <div class="row">
-                <input  id="inputResult" placeholder="what's on your mind?" type="text" ><button id="addInput-btn">📋</button>
+                <input  id="inputResult" placeholder="what's on your mind?" type="text" >
+                <button id="submit">Save</button>
+                <button id="display">Submit</button>
             </div>
-            <ul id="list-container">
+            <ul>
                <li style="padding-bottom: 0;color:#002765 ;">Select if task is completed.</li>
                 <li style="padding-top: 0;color:#002765 ;">Double click to remove task.</li>
+                <i class="fa-thin fa-eye"></i><div id="list-container"></div>
             </ul>
             
         </div>
@@ -30,7 +33,7 @@
     
     
 
-
+    <script src="https://kit.fontawesome.com/850ca6a355.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>

@@ -1,48 +1,71 @@
+let info = [];
 
-let addInputButton = document.getElementById("addInput-btn");
+let submit = document.getElementById("submit");
 let toDoContainer = document.getElementById("toDoContainer");
-let inputResult =  document.getElementById("inputResult");
+let display = document.getElementById("display");
 
 
-// action when clicked
-  addInputButton.addEventListener("click",function(){
-  let paragraph = document.createElement('p')
 
-  // styles the text after submitted
-  paragraph.classList.add('paragraph-styling')
-  paragraph.innerText = inputResult.value;
-  toDoContainer.appendChild(paragraph);
- 
-  // empty input after value submitted
-  inputResult.value = "";
- 
-  //data to local storage
-  // saveData();
-  // marks list item checked
-  paragraph.addEventListener("click",function(){
-    paragraph.style.textDecoration = "line-through";
+// action when clicked, "submit button"
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  let inputResult = document.getElementById("inputResult").value;
 
-    // saveData();
-  })
-  // To remove item from list (double click)
-  paragraph.addEventListener("dblclick",function(){
-   toDoContainer.removeChild(paragraph);
-  //  saveData();
-  })
-  paragraph.addEventListener("dblclick",function(){
-    toDoContainer.removeChild(paragraph);
-   //  saveData();
+  // Pushes data to localStorage
+  info.push({
+    inputResult
+  });
+  console.log(info);
 
-   })
-   
+  localStorage.setItem('data', JSON.stringify(info));
 })
 
-// function saveData(){
-//   localStorage.setItem("task",listContainer.innerHTML);
-// }
+// Display on DOM, "display button"
 
-//Display data when we open or close website
-// function showTak(){
-//   listContainer.innerHTML = localStorage.getItem("task");
-// }
-// showTak();
+display.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  let displayInfo = document.getElementById('list-container')
+  let myData = JSON.parse(localStorage.getItem('data'));
+
+  if (myData) {
+    displayInfo.innerHTML = '';
+    
+    //  function() {
+
+    //  }
+
+    myData.forEach(info => {
+      let results = document.createElement('li');
+      results.textContent = `
+      <i class="fa-thin fa-eye"></i> ${info.inputResult}
+      `;
+      displayInfo.appendChild(results)
+    
+      // styles the text after submitted
+      displayInfo.classList.add('paragraph-styling')
+      // empty input after value submitted paragraph.innerText = inputResult.value;
+      toDoContainer.appendChild(displayInfo);
+      inputResult.value = "";
+
+    });
+
+    // marks list item checked
+    displayInfo.addEventListener("click", function () {
+      displayInfo.style.textDecoration = "line-through";
+
+    })
+    // To remove item from list (double click) 
+    displayInfo.addEventListener("dblclick", function () {
+      toDoContainer.removeChild(displayInfo);
+
+    })
+    
+  } else {
+    displayInfo.textContent = 'Please enter Data'
+  }
+
+});
+
+
+// old data
