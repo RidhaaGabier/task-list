@@ -5,57 +5,22 @@
     font-family: "Poppins",sans-serif;
  
 } 
-/* html,body{
-    color: white;
-    width: 100%;
-    min-height: 83.5vh;
-    margin: 0 auto;
-}
-body{
-  
-  
-} 
-*/
+
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(145deg,#153677,#4e085f);
+    background: linear-gradient(#2369f7,#4e085f);
     background-repeat: no-repeat;
     padding: 10px;
 }
 
-/* #inputResult{
-    width: 300px;
-    height: 46px;
-    border-radius: 20px;
-    border: 1px solid white;
-    outline: none;
-    vertical-align: middle;
-    cursor: pointer;
-
-} */
-
-/* #addInput-btn{
-    height: 50px;
-    width: 50px;border: 1px solid white;
-    vertical-align: middle;
-    font-size: 30px;
-    cursor: pointer;
-    margin-left: 0.6rem;
-    border-radius: 3rem;
-    
-
-} */
 .list{
-    /* margin-top: 25px; */
     color: black;
     background: #fff;
-    /* display: flex; */
     align-items: center;
     max-width: 540px;
     margin:100px auto 20px;
-    padding: 40px 30px 70px ;
-    border-radius: 12px;
+    padding: 20px 20px 30px ;
 
 }
 
@@ -102,11 +67,10 @@ button{
     cursor: pointer;
     border-radius: 40px;
     padding:16px 50px;
-    background: #ffb22d;
+    background: #1f16d7;
 }
 
  ul li{
-    /* list-style: ; */
     font-size: 20px;
     padding: 12px 30px 30px 5px;
     position: relative;
@@ -116,18 +80,7 @@ button{
     
 } 
 
-/* ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(https://fontawesome.com/icons/eye?f=sharp&s=light);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}  */
+
 @media screen and (max-width: 300px){
 button{
     width: 5%;
@@ -149,49 +102,4 @@ input{
     }
     }
 
-    /*
-    // let paragraph = document.createElement('p')
-
-
-
-  // styles the text after submitted
-  // paragraph.classList.add('paragraph-styling')
-  // paragraph.innerText = inputResult.value;
-  // toDoContainer.appendChild(paragraph);
- 
-  // empty input after value submitted
-  // inputResult.value = "";
- 
-  //data to local storage
-  // saveData();
-  // marks list item checked
-  // paragraph.addEventListener("click",function(){
-  //   paragraph.style.textDecoration = "line-through";
-
-    // saveData();
-  }
-  // To remove item from list (double click)
-  // paragraph.addEventListener("dblclick",function(){
-  //  toDoContainer.removeChild(paragraph);
-  //  saveData();
-  })
-  // paragraph.addEventListener("dblclick",function(){
-  //   toDoContainer.removeChild(paragraph);
-   //  saveData();
-
-   })
    
-})
-
-
-
-// function saveData(){
-//   localStorage.setItem("task",listContainer.innerHTML);
-// }
-
-//Display data when we open or close website
-// function showTak(){
-//   listContainer.innerHTML = localStorage.getItem("task");
-// }
-// showTak();
-    */
